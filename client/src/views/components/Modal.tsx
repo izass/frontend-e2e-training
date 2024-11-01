@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useClickOutside } from "../hooks/useClickOutside";
+import { testIds } from "../helpers/testIds";
 
 export type ModalProps = {
   children: ReactNode;
@@ -22,7 +23,7 @@ export const Modal = ({ children, onClickOutside = () => {} }: ModalProps) => {
 
   return (
     <Modal.Wrapper>
-      <Modal.Overlay />
+      <Modal.Overlay data-testid={testIds.modalOverlay} />
       <Modal.Content ref={ref}>{children}</Modal.Content>
     </Modal.Wrapper>
   );

@@ -15,6 +15,7 @@ export const testIds = (() => {
   const confirmationPromptYesButton = (dataTestId: string | undefined) =>
     dataTestId ? `${dataTestId}-yes-button` : "";
 
+  const modalOverlay = "modal-overlay";
   const addNoteForm = "add-note-form";
   const addNoteFormTitleInput = noteFormTitleInput(addNoteForm);
   const addNoteFormTextInput = noteFormTextInput(addNoteForm);
@@ -87,5 +88,6 @@ export const testIds = (() => {
     logoutButton,
     loginNotice,
     headerTitle,
+    modalOverlay
   };
 })();
